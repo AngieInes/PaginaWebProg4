@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curiosidades y datos peculiares sobre Mad Men, su producción y sus personajes.">
+  <title>Mad Men | Curiosidades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Oswald:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Mad Men, volver al inicio"><img src="img/logo-mad-men.png" alt="Mad Men"></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <div class="nav-dropdown">
+        <a class="season-nav-link" href="temporadas.html" aria-haspopup="true">
+          Temporadas <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </a>
+        <div class="season-submenu" aria-label="Seleccionar temporada">
+          <a href="temporada-1.html">Temporada 1</a>
+          <a href="temporada-2.html">Temporada 2</a>
+          <a href="temporada-3.html">Temporada 3</a>
+          <a href="temporada-4.html">Temporada 4</a>
+          <a href="temporada-5.html">Temporada 5</a>
+          <a href="temporada-6.html">Temporada 6</a>
+          <a href="temporada-7.html">Temporada 7</a>
+        </div>
+      </div>
+      <a class="active" href="personajes.html">Personajes</a>
+      <a href="galeria.html">Galería</a>
+      <a href="curiosidades.html">Curiosidades</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="page characters-page">
+    <!-- Ficha central: se actualiza al seleccionar una miniatura -->
+    <section class="container character-feature" id="characterFeature" aria-live="polite" aria-labelledby="characterName">
+      <div class="character-portrait" id="featureVisual">
+        <img id="featureImage" src="img/don-draper.webp" alt="Don Draper sentado en su oficina">
+        <div class="feature-placeholder" id="featurePlaceholder" aria-hidden="true"></div>
+        <span class="portrait-label" id="featureLabel">Sterling Cooper · Director creativo</span>
+      </div>
+
+      <div class="character-feature-copy">
+        <div class="atomic-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="eyebrow" id="featureEyebrow">El protagonista</p>
+        <h1 id="characterName">Don Draper</h1>
+        <p class="character-subtitle" id="characterRole">Director creativo</p>
+        <div class="character-rule"></div>
+        <div id="characterDescription">
+          <p>Don Draper es el protagonista central de <strong>Mad Men</strong>. Un hombre brillante, carismático y enigmático, cuya identidad y pasado tienen tanto peso como las campañas que crea.</p>
+          <p>Como director creativo de Sterling Cooper, ocupa un lugar central en el mundo de la publicidad de Madison Avenue, mientras intenta mantener separadas su vida profesional, su familia y los secretos que lo acompañan.</p>
+        </div>
+        <blockquote id="characterQuote">“La publicidad es, en esencia, una forma de persuadir.”</blockquote>
+      </div>
+    </section>
+
+    <section class="container character-group" aria-labelledby="publicidad-title">
+      <div class="group-heading">
+        <span class="group-number">01</span>
+        <div><p class="eyebrow">Madison Avenue</p><h2 id="publicidad-title">Sterling Cooper y el mundo de la publicidad</h2></div>
+      </div>
+      <div class="characters-grid">
+        <button class="character-card is-active" type="button" data-character="don" aria-pressed="true">
+          <span class="card-image"><img src="img/don-draper.webp" alt="Don Draper" loading="lazy"></span>
+          <span class="card-content"><strong>Don Draper</strong><small>Director creativo</small></span>
+        </button>
+        <button class="character-card" type="button" data-character="peggy" aria-pressed="false">
+          <span class="card-image">
+          <img src="img/peggy.jpg"
+          alt="Peggy Olson"
+          loading="lazy">
+          </span><span class="card-content">
+            <strong>Peggy Olson</strong><small>Redactora publicitaria</small></span></button>
+        <button class="character-card" type="button" data-character="joan" aria-pressed="false">
+          <span class="card-image">
+          <img src="img/Joan.jpg"
+          alt="Joan Holloway"
+          loading="lazy">
+          </span>
+          <span class="card-content"><strong>Joan Holloway</strong><small>Jefa de secretarias</small></span></button>
+        <button class="character-card" type="button" data-character="roger" aria-pressed="false">
+            <span class="card-image">
+          <img src="img/roger.jpg"
+          alt="Roger Sterling"
+          loading="lazy">
+          </span>
+          <span class="card-content"><strong>Roger Sterling</strong><small>Socio de la agencia</small></span></button>
+        <button class="character-card" type="button" data-character="pete" aria-pressed="false">
+        <span class="card-image">
+          <img src="img/pete.jpg"
+          alt="Pete Campbell"
+          loading="lazy">
+          </span>
+          <span class="card-content"><strong>Pete Campbell</strong><small>Ejecutivo de cuentas</small></span></button>
+        <button class="character-card" type="button" data-character="bert" aria-pressed="false">
+        <span class="card-image">
+          <img src="img/bert.jpg" alt="Bert Cooper" loading="lazy">
+         </span>
+          <span class="card-content">
+          <strong>Bert Cooper</strong>
+          <small>Socio principal</small></span></button>
+        <button class="character-card" type="button" data-character="ken" aria-pressed="false">
+        <span class="card-image"><img src="img/ken.jpg" alt="Ken Cosgrove" loading="lazy"></span>
+        <span class="card-content"><strong>Ken Cosgrove</strong><small>Ejecutivo de cuentas</small></span>
+        </button>
+        <button class="character-card" type="button" data-character="harry" aria-pressed="false">
+        <span class="card-image"><img src="img/Harry.jpg" alt="Harry Crane" loading="lazy"></span>
+        <span class="card-content"><strong>Harry Crane</strong><small>Encargado de medios</small></span>
+        </button>
+        <button class="character-card" type="button" data-character="paul" aria-pressed="false">
+        <span class="card-image"><img src="img/paul.jpg" alt="Paul Kinsey" loading="lazy"></span>
+        <span class="card-content"><strong>Paul Kinsey</strong><small>Redactor publicitario</small></span>
+        </button>
+        <button class="character-card" type="button" data-character="sal" aria-pressed="false">
+        <span class="card-image"><img src="img/romano.jpg" alt="Salvatore Romano" loading="lazy"></span>
+        <span class="card-content"><strong>Salvatore Romano</strong><small>Director de arte</small></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="container character-group family-group" aria-labelledby="familia-title">
+      <div class="group-heading">
+        <span class="group-number">02</span>
+        <div><p class="eyebrow">Más allá de la oficina</p><h2 id="familia-title">Familia y vida personal de Don</h2></div>
+      </div>
+      <div class="characters-grid family-grid">
+        <button class="character-card" type="button" data-character="betty" aria-pressed="false">
+          <span class="card-image"><img src="img/betty.jpg" alt="Betty Draper" loading="lazy"></span>
+          <span class="card-content"><strong>Betty Draper</strong><small>Ex esposa de Don</small></span>
+        </button>
+        <button class="character-card" type="button" data-character="sally" aria-pressed="false">
+          <span class="card-image"><img src="img/sally.jpg" alt="Sally Draper" loading="lazy"></span>
+          <span class="card-content"><strong>Sally Draper</strong><small>Hija mayor</small></span>
+        </button>
+        <button class="character-card" type="button" data-character="bobby" aria-pressed="false">
+          <span class="card-image"><img src="img/bobby.jpg" alt="Bobby Draper" loading="lazy"></span>
+          <span class="card-content"><strong>Bobby Draper</strong><small>Hijo mediano</small></span>
+        </button>
+        <button class="character-card" type="button" data-character="gene" aria-pressed="false">
+          <span class="card-image"><img src="img/gene.jpg" alt="Gene Draper" loading="lazy"></span>
+          <span class="card-content"><strong>Gene Draper</strong><small>Hijo menor</small></span>
+        </button>
+        <button class="character-card" type="button" data-character="megan" aria-pressed="false">
+          <span class="card-image"><img src="img/Megan.jpg" alt="Megan Draper" loading="lazy"></span>
+          <span class="card-content"><strong>Megan Draper</strong><small>Segunda esposa</small></span>
+</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><a class="brand" href="index.html" aria-label="Mad Men, volver al inicio"><img src="img/logo-mad-men.png" alt="Mad Men"></a>
+        <p class="legal">Sitio homenaje no oficial · Contenido utilizado con fines educativos y de diseño.</p></div>
+    </div>
+  </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
+

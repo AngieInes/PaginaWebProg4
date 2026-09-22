@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mad Men — temporadas y capítulos.">
+  <title>Mad Men | Temporadas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Mad Men, volver al inicio"><img src="img/logo-mad-men.png" alt="Mad Men"></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <div class="nav-dropdown">
+          <a class="season-nav-link" href="temporadas.html" aria-haspopup="true">
+            Temporadas <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="season-submenu" aria-label="Seleccionar temporada">
+            <a href="temporada-1.html">Temporada 1</a>
+            <a href="temporada-2.html">Temporada 2</a>
+            <a href="temporada-3.html">Temporada 3</a>
+            <a href="temporada-4.html">Temporada 4</a>
+            <a href="temporada-5.html">Temporada 5</a>
+            <a href="temporada-6.html">Temporada 6</a>
+            <a href="temporada-7.html">Temporada 7</a>
+          </div>
+        </div>
+      <a href="personajes.html">Personajes</a>
+      <a href="galeria.html">Galería</a>
+      <a href="curiosidades.html">Curiosidades</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+<main class="page season-detail-page">
+  <section class="container season-detail-heading">
+    <a class="back-link" href="temporadas.html"><i class="fa-solid fa-arrow-left"></i> Volver a temporadas</a>
+    <div class="season-title-row">
+      <div><p class="eyebrow">Mad Men · 2010</p><h1>Temporada 4</h1></div>
+      <div class="season-stamp"><span>13</span><small>CAPÍTULOS</small></div>
+    </div>
+    <div class="rule"></div>
+    <p>Una nueva agencia y una nueva etapa para Don Draper marcan una temporada de cambios, pérdidas y reinvenciones.</p>
+  </section>
+
+  <section class="container episodes-panel" aria-label="Capítulos de la temporada 4">
+    <div class="episodes-header"><span>EPISODIOS</span><span>TÍTULO</span></div>
+    <ol class="episodes-list">
+      <li class="episode-item"><span class="episode-number">01</span><span class="episode-title">Public Relations</span></li>
+      <li class="episode-item"><span class="episode-number">02</span><span class="episode-title">Christmas Comes But Once a Year</span></li>
+      <li class="episode-item"><span class="episode-number">03</span><span class="episode-title">The Good News</span></li>
+      <li class="episode-item"><span class="episode-number">04</span><span class="episode-title">The Rejected</span></li>
+      <li class="episode-item"><span class="episode-number">05</span><span class="episode-title">The Chrysanthemum and the Sword</span></li>
+      <li class="episode-item"><span class="episode-number">06</span><span class="episode-title">Waldorf Stories</span></li>
+      <li class="episode-item"><span class="episode-number">07</span><span class="episode-title">The Suitcase</span></li>
+      <li class="episode-item"><span class="episode-number">08</span><span class="episode-title">The Summer Man</span></li>
+      <li class="episode-item"><span class="episode-number">09</span><span class="episode-title">The Beautiful Girls</span></li>
+      <li class="episode-item"><span class="episode-number">10</span><span class="episode-title">Hands and Knees</span></li>
+      <li class="episode-item"><span class="episode-number">11</span><span class="episode-title">Chinese Wall</span></li>
+      <li class="episode-item"><span class="episode-number">12</span><span class="episode-title">Blowing Smoke</span></li>
+      <li class="episode-item"><span class="episode-number">13</span><span class="episode-title">Tomorrowland</span></li>
+    </ol>
+  </section>
+
+  <nav class="container season-pager" aria-label="Navegar entre temporadas">
+    <a class="season-nav prev" href="temporada-3.html"><i class="fa-solid fa-arrow-left"></i> Temporada 3</a>
+    <a class="season-nav next" href="temporada-5.html">Temporada 5 <i class="fa-solid fa-arrow-right"></i></a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><p class="footer-title">MAD MEN</p><p class="legal">Sitio homenaje no oficial · Contenido utilizado con fines educativos y de diseño.</p></div>
+  </div>
+</footer>
+<script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto del sitio homenaje a Mad Men.">
+  <title>Mad Men | Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Mad Men, volver al inicio"><img src="img/logo-mad-men.png" alt="Mad Men"></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <div class="nav-dropdown">
+          <a class="season-nav-link" href="temporadas.html" aria-haspopup="true">
+            Temporadas <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="season-submenu" aria-label="Seleccionar temporada">
+            <a href="temporada-1.html">Temporada 1</a>
+            <a href="temporada-2.html">Temporada 2</a>
+            <a href="temporada-3.html">Temporada 3</a>
+            <a href="temporada-4.html">Temporada 4</a>
+            <a href="temporada-5.html">Temporada 5</a>
+            <a href="temporada-6.html">Temporada 6</a>
+            <a href="temporada-7.html">Temporada 7</a>
+          </div>
+        </div>
+        <a href="personajes.html">Personajes</a><a href="galeria.html">Galería</a><a href="curiosidades.html">Curiosidades</a>
+        <a class="active" href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="container contact-layout">
+      <div class="contact-copy">
+        <p class="eyebrow">Sterling Cooper</p>
+        <h1>Hablemos.</h1>
+        <p>¿Tienes una sugerencia para el sitio, una corrección o simplemente quieres compartir tu escena favorita?</p>
+        <div class="contact-note"><i class="fa-solid fa-envelope"></i><span>Este formulario es demostrativo y no envía información a un servidor.</span></div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+        <button class="button" type="submit">Enviar mensaje <i class="fa-solid fa-paper-plane"></i></button>
+        <p class="form-message" id="formMessage" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><a class="brand" href="index.html" aria-label="Mad Men, volver al inicio"><img src="img/logo-mad-men.png" alt="Mad Men"></a>
+        <p class="legal">Sitio homenaje no oficial · Contenido utilizado con fines educativos y de diseño.</p></div>
+    </div>
+  </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
