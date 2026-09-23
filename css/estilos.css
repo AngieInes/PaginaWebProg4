@@ -881,6 +881,8 @@ a {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .footer-brand {
