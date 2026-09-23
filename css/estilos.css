@@ -1673,3 +1673,28 @@ a {
     flex-basis: 100%;
   }
 }
+
+/* =========================================================
+   Estilo para la imagen en la tarjeta de curiosidades
+   ========================================================= */
+.curiosity-media {
+  margin: 14px 0 16px 0;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid rgba(41, 42, 39, 0.15);
+  background: #222;
+}
+
+.curiosity-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  filter: saturate(.9) contrast(1.02);
+  transition: transform 0.3s ease;
+}
+
+.curiosity-card:hover .curiosity-media img {
+  transform: scale(1.02);
+}
