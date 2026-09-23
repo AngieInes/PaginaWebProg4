@@ -3,131 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Curiosidades y datos peculiares sobre Mad Men, su producción y sus personajes.">
-  <title>Mad Men | Curiosidades</title>
+  <meta name="description" content="Galería visual de Mad Men.">
+  <title>Mad Men | Galería</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Oswald:wght@400;500;600&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Mad Men, volver al inicio"><img src="img/logo-mad-men.png" alt="Mad Men"></a>
-    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-    <nav class="main-nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <div class="nav-dropdown">
-        <a class="season-nav-link" href="temporadas.html" aria-haspopup="true">
-          Temporadas <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-        </a>
-        <div class="season-submenu" aria-label="Seleccionar temporada">
-          <a href="temporada-1.html">Temporada 1</a>
-          <a href="temporada-2.html">Temporada 2</a>
-          <a href="temporada-3.html">Temporada 3</a>
-          <a href="temporada-4.html">Temporada 4</a>
-          <a href="temporada-5.html">Temporada 5</a>
-          <a href="temporada-6.html">Temporada 6</a>
-          <a href="temporada-7.html">Temporada 7</a>
-        </div>
-      </div>
-      <a href="personajes.html">Personajes</a>
-      <a class="active" href="galeria.html">Galería</a>
-      <a href="curiosidades.html">Curiosidades</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Mad Men, volver al inicio"><img src="img/logo-mad-men.png" alt="Mad Men"></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a><div class="nav-dropdown">
+          <a class="season-nav-link" href="temporadas.html" aria-haspopup="true" aria-expanded="false">
+            Temporadas <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="season-submenu" aria-label="Seleccionar temporada">
+            <a href="temporada-1.html">Temporada 1</a>
+            <a href="temporada-2.html">Temporada 2</a>
+            <a href="temporada-3.html">Temporada 3</a>
+            <a href="temporada-4.html">Temporada 4</a>
+            <a href="temporada-5.html">Temporada 5</a>
+            <a href="temporada-6.html">Temporada 6</a>
+            <a href="temporada-7.html">Temporada 7</a>
+          </div>
+        </div><a class="active" href="galeria.html">Galería</a><a href="curiosidades.html">Curiosidades</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="page">
     <section class="container page-heading">
       <p class="eyebrow">Imágenes de la serie</p>
       <h1>Galería</h1>
-      <p>Una selección de las mejores imágenes oficiales para que puedas usar de fondo de pantalla en tu computadora.</p>
+      <p>Una selección de las imágenes oficiales proporcionadas para este proyecto.</p>
     </section>
 
-    <!-- Grilla de la galería con los atributos data-full y data-caption para el lightbox -->
     <section class="container gallery-grid">
-      <figure class="gallery-item" data-full="img/portada.jpg" data-caption="El elenco · La elegancia de Madison Avenue">
+      <figure class="gallery-item gallery-wide">
         <img src="img/portada.jpg" alt="Elenco de Mad Men">
         <figcaption>El elenco · La elegancia de Madison Avenue</figcaption>
       </figure>
-      <figure class="gallery-item" data-full="img/poster.jpg" data-caption="Identidad visual · El hombre detrás del traje">
+      <figure class="gallery-item">
         <img src="img/poster.jpg" alt="Póster de Mad Men">
         <figcaption>Identidad visual · El hombre detrás del traje</figcaption>
       </figure>
-      <figure class="gallery-item" data-full="img/Mad_Men_2.jpg" data-caption="Escena de salón · Los detalles de época">
-        <img src="img/Mad_Men_2.jpg" alt="Escena de reunión de Mad Men">
-        <figcaption>Escena de salón · Los detalles de época</figcaption>
-      </figure>
-      <figure class="gallery-item" data-full="img/Mad_Men_3.jpg" data-caption="Retrato clásico · Estilo minimalista">
-        <img src="img/Mad_Men_3.jpg" alt="Elenco en blanco y negro">
-        <figcaption>Retrato clásico · Estilo minimalista</figcaption>
-      </figure>
-      <figure class="gallery-item" data-full="img/Mad_Men_4.jpg" data-caption="Sterling Cooper · Reunión ejecutiva">
-        <img src="img/Mad_Men_4.jpg" alt="Oficina de Sterling Cooper">
-        <figcaption>Sterling Cooper · Reunión ejecutiva</figcaption>
-      </figure>
-      <figure class="gallery-item" data-full="img/Mad_Men_5.jpg" data-caption="Arte conceptual · Estilo retro ilustrado">
-        <img src="img/Mad_Men_5.jpg" alt="Ilustraciones de personajes">
-        <figcaption>Arte conceptual · Estilo retro ilustrado</figcaption>
-      </figure>
-      <figure class="gallery-item" data-full="img/Mad_Men_6.jpg" data-caption="Gráfica de personajes · Estilo vectorial">
-        <img src="img/Mad_Men_6.jpg" alt="Ilustración del elenco">
-        <figcaption>Gráfica de personajes · Estilo vectorial</figcaption>
-      </figure>
-      <figure class="gallery-item" data-full="img/Mad_Men_7.jpg" data-caption="Una copa en el bar · Negocios y tragos">
-        <img src="img/Mad_Men_7.jpg" alt="Roger Sterling y Don Draper en el bar">
-        <figcaption>Una copa en el bar · Negocios y tragos</figcaption>
-      </figure>
-      <figure class="gallery-item" data-full="img/Mad_Men_8.jpg" data-caption="Composición coral · Publicidad y drama">
-        <img src="img/Mad_Men_8.jpg" alt="Elenco principal en blanco y negro">
-        <figcaption>Composición coral · Publicidad y drama</figcaption>
-      </figure>
-      <figure class="gallery-item" data-full="img/Mad_Men_9.jpg" data-caption="Exteriores · La ciudad de Nueva York">
-        <img src="img/Mad_Men_9.jpg" alt="Personajes en la calle">
-        <figcaption>Exteriores · La ciudad de Nueva York</figcaption>
-      </figure>
-      <figure class="gallery-item" data-full="img/Mad_Men_10.jpg" data-caption="Don Draper · Aislado en la multitud">
-        <img src="img/Mad_Men_10.jpg" alt="Don Draper entre la multitud">
-        <figcaption>Don Draper · Aislado en la multitud</figcaption>
-      </figure>
-      <figure class="gallery-item" data-full="img/Mad_Men_11.jpg" data-caption="Reunión familiar · La alta sociedad">
-        <img src="img/Mad_Men_11.jpg" alt="Familia Draper y allegados en evento elegante">
-        <figcaption>Reunión familiar · La alta sociedad</figcaption>
-      </figure>
     </section>
-
-   <!-- Estructura del Lightbox (Ventana Modal) con navegación -->
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-      <div class="lightbox-content">
-        <button class="lightbox-close" aria-label="Cerrar lightbox">&times;</button>
-        
-        <button class="lightbox-btn lightbox-prev" aria-label="Imagen anterior">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        
-        <img class="lightbox-img" src="" alt="Imagen ampliada de la galería">
-        
-        <button class="lightbox-btn lightbox-next" aria-label="Imagen siguiente">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
-        <div class="lightbox-footer">
-          <p class="lightbox-caption"></p>
-          <a class="lightbox-download" href="" download target="_blank" rel="noopener">
-            <i class="fa-solid fa-download"></i> Descargar imagen
-          </a>
-        </div>
-      </div>
-    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div><a class="brand" href="index.html" aria-label="Mad Men, volver al inicio"><img src="img/logo-mad-men.png" alt="Mad Men"></a>
-        <p class="legal">Sitio homenaje no oficial · Contenido utilizado con fines educativos y de diseño.</p></div>
+      <div><p class="footer-title">MAD MEN</p><p class="legal">Sitio homenaje no oficial · Contenido utilizado con fines educativos y de diseño.</p></div>
+      <div class="social" aria-label="Redes sociales">
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
     </div>
   </footer>
   <script src="js/scripts.js"></script>

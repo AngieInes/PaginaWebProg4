@@ -3,96 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mad Men - El sueño americano</title>
-  <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Sitio web dedicado a Mad Men, la serie ambientada en el mundo publicitario de Nueva York de los años 60.">
+  <title>Mad Men | Inicio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Mad Men, volver al inicio">
-      <img src="img/logo-mad-men.png" alt="Mad Men">
-    </a>
-
-    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-
-    <nav class="main-nav" aria-label="Navegación principal">
-      <a href="index.html" class="active">Inicio</a>
-
-      <div class="nav-dropdown">
-        <a href="temporadas.html" class="season-nav-link">
-          Temporadas <i class="fa-solid fa-chevron-down"></i>
-        </a>
-        <div class="season-submenu">
-          <a href="temporada-1.html">Temporada 1</a>
-          <a href="temporada-2.html">Temporada 2</a>
-          <a href="temporada-3.html">Temporada 3</a>
-          <a href="temporada-4.html">Temporada 4</a>
-          <a href="temporada-5.html">Temporada 5</a>
-          <a href="temporada-6.html">Temporada 6</a>
-          <a href="temporada-7.html">Temporada 7</a>
-        </div>
-      </div>
-
-      <a href="personajes.html">Personajes</a>
-      <a href="galeria.html">Galería</a>
-      <a href="curiosidades.html">Curiosidades</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero container">
-    <div class="hero-copy">
-      <p class="eyebrow">Manhattan · Madison Avenue · 1960</p>
-      <h1>Mad Men: El sueño americano también se publicita</h1>
-      <div class="rule"></div>
-
-      <p><strong>Mad Men</strong> retrata el competitivo mundo de la publicidad neoyorquina a comienzos de los años sesenta, cuando una campaña podía cambiar una marca y una decisión podía cambiar una vida.</p>
-
-      <p>En el centro está <strong>Don Draper</strong>, un brillante director creativo rodeado de ejecutivos, redactores y secretarias que intentan abrirse camino dentro de una sociedad que empieza a transformarse.</p>
-
-      <p>La serie combina drama, ironía y una cuidada estética de época para explorar la identidad, la ambición, las relaciones y el precio de mantener una imagen perfecta.</p>
-
-      <a class="button" href="temporadas.html">
-        Explorar la serie <i class="fa-solid fa-arrow-right"></i>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Mad Men, volver al inicio">
+        <span class="brand-mad">MAD</span><span class="brand-men">MEN</span>
       </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="active" href="index.html">Inicio</a>
+        <div class="nav-dropdown">
+          <a class="season-nav-link" href="temporadas.html" aria-haspopup="true" aria-expanded="false">
+            Temporadas <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="season-submenu" aria-label="Seleccionar temporada">
+            <a href="temporada-1.html">Temporada 1</a>
+            <a href="temporada-2.html">Temporada 2</a>
+            <a href="temporada-3.html">Temporada 3</a>
+            <a href="temporada-4.html">Temporada 4</a>
+            <a href="temporada-5.html">Temporada 5</a>
+            <a href="temporada-6.html">Temporada 6</a>
+            <a href="temporada-7.html">Temporada 7</a>
+          </div>
+        </div><a href="personajes.html">Personajes</a>
+        <a href="galeria.html">Galería</a>
+        <a href="curiosidades.html">Curiosidades</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="hero-photos">
-      <div class="retro-photo photo-1">
-        <img src="img/portada.jpg" alt="El elenco principal de Mad Men">
-        <span class="image-caption">Madison Avenue</span>
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Manhattan · Madison Avenue · 1960</p>
+        <h1>Una época de humo, whisky y grandes ideas.</h1>
+        <div class="rule"></div>
+        <p><strong>Mad Men</strong> retrata el competitivo mundo de la publicidad neoyorquina a comienzos de los años sesenta, cuando una campaña podía cambiar una marca y una decisión podía cambiar una vida.</p>
+        <p>En el centro está Don Draper, un brillante director creativo rodeado de ejecutivos, redactores y secretarias que intentan abrirse camino dentro de una sociedad que empieza a transformarse.</p>
+        <p>La serie combina drama, ironía y una cuidada estética de época para explorar la identidad, la ambición, las relaciones y el precio de mantener una imagen perfecta.</p>
+        <a class="button" href="temporadas.html">Explorar la serie <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
-      <div class="retro-photo photo-2">
-        <img src="img/imagenportada1.jpg" alt="Elenco de Mad Men en una fiesta">
-        <span class="image-caption">Sterling Cooper</span>
+      <div class="hero-image">
+        <img src="img/portada.jpg" alt="El elenco de Mad Men en una composición promocional de época">
+        <span class="image-caption">Madison Avenue, Nueva York</span>
       </div>
+    </section>
+  </main>
 
-      <div class="retro-photo photo-3">
-        <img src="img/imagenportada2.jpg" alt="Don Draper y su familia">
-        <span class="image-caption">Los Draper</span>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-title">MAD MEN</p>
+        <p class="legal">Sitio homenaje no oficial · Contenido utilizado con fines educativos y de diseño.</p>
+      </div>
+      <div class="social" aria-label="Redes sociales">
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div><a class="brand" href="index.html" aria-label="Mad Men, volver al inicio">
-      <img src="img/logo-mad-men.png" alt="Mad Men"></a>
-      <p class="legal">Sitio homenaje no oficial · Contenido utilizado con fines educativos y de diseño.</p></div>
-  </div>
-</footer>
-
-<script src="js/scripts.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>

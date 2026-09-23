@@ -191,109 +191,112 @@ a {
   cursor: pointer;
 }
 
-/* Home / Hero */
+/* Home */
 .hero {
   min-height: calc(100vh - 82px);
   display: flex;
   align-items: center;
-  gap: clamp(40px, 6vw, 80px);
-  padding: 60px 0;
+  gap: clamp(40px, 7vw, 90px);
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.hero-copy,
+.hero-image {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .hero-copy {
-  flex: 1 1 0;
-  min-width: 0;
+  padding: 10px 0;
 }
 
-/* =========================================================
-   Efecto de fotografías retro / "tiradas" en el Hero
-   ========================================================= */
-.hero-photos {
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--rust);
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: .82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+h1,
+h2,
+.footer-title {
+  font-family: "Oswald", Impact, sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: .98;
+  letter-spacing: -.025em;
+  font-weight: 500;
+}
+
+.hero-copy p:not(.eyebrow) {
+  max-width: 660px;
+  color: #45443e;
+  font-size: .97rem;
+}
+
+.rule {
+  width: 76px;
+  height: 5px;
+  margin: 28px 0 25px;
+  background: var(--rust);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 13px;
+  padding: 13px 20px;
+  color: #f6efe2;
+  background: var(--olive-dark);
+  border: 2px solid var(--olive-dark);
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: var(--rust);
+  border-color: var(--rust);
+}
+
+.hero-image {
   position: relative;
-  flex: 1 1 0;
-  min-width: 0;
-  min-height: 450px;
+  box-shadow: var(--shadow);
+  background: #3c3a32;
+  transform: rotate(1.2deg);
 }
 
-.retro-photo {
-  position: absolute;
-  background: #fdfbf7;
-  padding: 10px 10px 32px 10px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
-  transition: transform 0.3s ease, z-index 0.3s ease;
-}
-
-.retro-photo img {
-  display: block;
+.hero-image img {
   width: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   filter: saturate(.78) sepia(.12) contrast(.95);
 }
 
-.retro-photo .image-caption {
-  position: absolute;
-  bottom: 8px;
-  left: 10px;
-  right: 10px;
-  padding: 0;
-  background: transparent;
-  color: #555;
+.image-caption {
+  display: block;
+  padding: 10px 14px;
+  color: #eee5d5;
+  background: #34352d;
   font-family: "Oswald", Arial, sans-serif;
-  font-size: .68rem;
-  letter-spacing: .1em;
-  text-align: center;
-}
-
-/* Posicionamiento y rotación individual para las 3 fotos */
-.photo-1 {
-  width: 65%;
-  top: 0;
-  left: 0;
-  transform: rotate(-4deg);
-  z-index: 1;
-}
-
-.photo-1 img {
-  aspect-ratio: 4 / 3;
-}
-
-.photo-2 {
-  width: 60%;
-  top: 25%;
-  right: 0;
-  transform: rotate(5deg);
-  z-index: 2;
-}
-
-.photo-2 img {
-  aspect-ratio: 16 / 9;
-}
-
-.photo-3 {
-  width: 52%;
-  bottom: 0;
-  left: 20%;
-  transform: rotate(-2deg);
-  z-index: 3;
-}
-
-.photo-3 img {
-  aspect-ratio: 4 / 3;
-}
-
-/* Efecto al pasar el cursor: la foto pasa al frente y se endereza */
-.retro-photo:hover {
-  transform: rotate(0deg) scale(1.04);
-  z-index: 10;
-}
-
-/* Ajuste responsive para pantallas chicas */
-@media (max-width: 820px) {
-  .hero-photos {
-    min-height: 350px;
-    width: min(100%, 450px);
-    margin-inline: auto;
-  }
+  font-size: .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 
 /* Páginas internas */
@@ -316,7 +319,10 @@ a {
   color: var(--muted);
 }
 
-/* Personajes — diseño editorial retro */
+
+/* =========================================================
+   Personajes — diseño editorial retro
+   ========================================================= */
 .characters-page {
   padding-top: 48px;
   padding-bottom: 70px;
@@ -596,33 +602,34 @@ a {
 .gallery-grid {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 28px;
 }
 
 .gallery-item {
-  flex: 1 1 calc(33.333% - 28px);
-  min-width: 280px;
+  flex: 1 1 320px;
   margin: 0;
   background: #34352d;
   box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-.gallery-item:hover {
-  transform: translateY(-4px);
+.gallery-wide {
+  flex: 2 1 650px;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 280px;
-  aspect-ratio: 16 / 9;
+  height: 460px;
   object-fit: cover;
-  object-position: center;
-  display: block;
+  filter: saturate(.78) sepia(.12);
+}
+
+.gallery-wide img {
+  height: 460px;
+}
+
+.gallery-item:last-child img {
+  object-position: center top;
 }
 
 .gallery-item figcaption {
@@ -632,141 +639,6 @@ a {
   font-size: .78rem;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: #34352d;
-}
-
-/* Lightbox */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  padding: 20px;
-}
-
-.lightbox.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.lightbox-content {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  background: #1a1a1a;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.lightbox-img {
-  max-width: 100%;
-  max-height: 75vh;
-  object-fit: contain;
-  display: block;
-  background: #000;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: none;
-  font-size: 2rem;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s;
-}
-
-.lightbox-close:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.lightbox-footer {
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #262622;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.lightbox-caption {
-  color: #eee5d5;
-  font-family: "Oswald", Arial, sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.lightbox-download {
-  background: #b54a32;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 2px;
-  font-family: "Oswald", Arial, sans-serif;
-  font-size: 0.8rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: background 0.2s;
-}
-
-.lightbox-download:hover {
-  background: #933924;
-}
-
-.lightbox-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: none;
-  font-size: 1.2rem;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.lightbox-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-50%) scale(1.05);
-}
-
-.lightbox-prev {
-  left: 15px;
-}
-
-.lightbox-next {
-  right: 15px;
 }
 
 /* Contacto */
@@ -906,6 +778,7 @@ a {
 }
 
 /* Responsive */
+
 @media (max-width: 980px) {
   .character-feature {
     gap: 32px;
@@ -958,9 +831,41 @@ a {
     padding: 13px 4px;
   }
 
+  /* En móvil, "Temporadas" abre el submenú al primer toque. */
   .season-submenu {
     display: none;
+    position: static;
+    min-width: 0;
+    width: 100%;
+    padding: 4px 0 8px 12px;
+    background: transparent;
+    border-top: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
   }
+
+  .nav-dropdown.is-open .season-submenu {
+    display: grid;
+  }
+
+  .nav-dropdown.is-open .season-nav-link {
+    color: #fff;
+    border-color: var(--rust);
+  }
+
+  .nav-dropdown.is-open .season-nav-link i {
+    transform: rotate(180deg);
+  }
+
+  .season-submenu a {
+    padding: 10px 13px;
+    border-bottom: 1px solid rgba(232,224,208,.12);
+    font-size: .76rem;
+  }
+
 
   .character-feature {
     flex-direction: column;
@@ -997,10 +902,9 @@ a {
     order: 1;
   }
 
-  .hero-photos {
+  .hero-image {
     order: 2;
-    min-height: 350px;
-    width: min(100%, 450px);
+    width: min(100%, 680px);
     margin-inline: auto;
   }
 
@@ -1018,6 +922,7 @@ a {
     height: 210px;
   }
 
+
   .characters-page {
     padding-top: 35px;
   }
@@ -1025,7 +930,6 @@ a {
   .character-card,
   .family-grid .character-card {
     flex-basis: 100%;
-    min-width: 100%;
   }
 
   .character-placeholder,
@@ -1035,7 +939,6 @@ a {
 
   .group-heading {
     align-items: flex-start;
-    gap: 14px;
   }
 
   .group-number {
@@ -1058,13 +961,29 @@ a {
     min-width: 100%;
   }
 
-  .gallery-item {
+  .character-card,
+  .family-grid .character-card {
+    min-width: 100%;
     flex-basis: 100%;
   }
 
-  .gallery-item img {
+  .group-heading {
+    gap: 14px;
+  }
+
+  .gallery-item,
+  .gallery-wide {
+    flex-basis: 100%;
+  }
+
+  .gallery-item img,
+  .gallery-wide img {
     height: auto;
     aspect-ratio: 3 / 2;
+  }
+
+  .gallery-item:last-child img {
+    aspect-ratio: 2 / 3;
   }
 
   .footer-inner {
@@ -1081,7 +1000,10 @@ a {
   }
 }
 
-/* Personajes interactivos y logotipos */
+
+/* =========================================================
+   Personajes interactivos
+   ========================================================= */
 .character-card {
   appearance: none;
   padding: 0;
@@ -1089,11 +1011,6 @@ a {
   font: inherit;
   text-align: center;
   cursor: pointer;
-  min-width: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
 }
 
 .character-card:focus-visible {
@@ -1107,30 +1024,12 @@ a {
   box-shadow: 0 12px 26px rgba(38,31,23,.16), inset 0 0 0 2px rgba(165,77,50,.18);
 }
 
-.character-card .card-image,
-.character-card .character-placeholder {
-  display: block;
-  flex: 0 0 auto;
-  width: 100%;
-  height: 132px;
-  aspect-ratio: auto;
-  overflow: hidden;
+.character-card.is-active .character-placeholder,
+.character-card.is-active .card-image {
+  box-shadow: inset 0 -5px 0 var(--rust);
 }
 
-.character-card .card-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-  object-position: center top;
-}
-
-.character-card .card-content {
-  flex: 1 1 auto;
-  min-height: 78px;
-  width: 100%;
-  overflow-wrap: anywhere;
+.card-content {
   display: block;
 }
 
@@ -1185,10 +1084,59 @@ a {
   transition: opacity .18s ease, transform .18s ease;
 }
 
-.brand img {
-  width: clamp(145px, 18vw, 205px);
-  height: auto;
+@media (max-width: 820px) {
+  .character-feature {
+    flex-direction: column;
+  }
+
+  .character-portrait img,
+  .character-portrait {
+    min-height: 0;
+  }
+
+  .character-portrait img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+
+/* Logo PNG del header */
+.brand img { width: clamp(145px, 18vw, 205px); height: auto; display: block; }
+
+/* Ajuste de miniaturas: la imagen queda siempre contenida dentro de su ficha */
+.character-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.character-card .card-image,
+.character-card .character-placeholder {
   display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  height: 132px;
+  aspect-ratio: auto;
+  overflow: hidden;
+}
+
+.character-card .card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.character-card .card-content {
+  flex: 1 1 auto;
+  min-height: 78px;
+  width: 100%;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 1100px) {
@@ -1212,7 +1160,10 @@ a {
   }
 }
 
-/* Temporadas y episodios */
+/* =========================================================
+   TEMPORADAS — navegación y listado de capítulos
+   ========================================================= */
+
 .season-links .season-card {
   color: inherit;
   text-decoration: none;
@@ -1279,6 +1230,7 @@ a {
 .season-link p {
   flex: 1 1 auto;
 }
+
 
 .season-arrow {
   display: block;
@@ -1419,6 +1371,7 @@ a {
   font-size: .91rem;
 }
 
+/* Episodio destacado */
 .episode-featured {
   align-items: center;
   padding: 18px 24px;
@@ -1431,9 +1384,17 @@ a {
   background: rgba(255, 252, 244, .7);
 }
 
+.episode-featured-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.episode-featured-info {
+  min-width: 0;
+}
+
 .episode-details {
   width: 100%;
-  position: relative;
 }
 
 .episode-details .episode-title {
@@ -1449,11 +1410,19 @@ a {
   font-weight: 400;
   line-height: 1.5;
   list-style: none;
+  transition: color .2s ease;
 }
 
-.episode-details .episode-title::-webkit-details-marker,
+.episode-details .episode-title::-webkit-details-marker {
+  display: none;
+}
+
 .episode-details .episode-title::marker {
   display: none;
+}
+
+.episode-details .episode-title:hover {
+  color: var(--ink);
 }
 
 .episode-details .episode-title i {
@@ -1499,6 +1468,52 @@ a {
   line-height: 1.8;
 }
 
+@media (max-width: 760px) {
+  .episode-summary {
+    grid-template-columns: 170px 1fr;
+    gap: 18px;
+  }
+
+  .episode-summary-image {
+    width: 170px;
+    height: 115px;
+  }
+}
+
+@media (max-width: 560px) {
+  .episode-featured {
+    padding: 16px 14px;
+    gap: 12px;
+  }
+
+  .episode-featured .episode-number {
+    flex: 0 0 42px;
+  }
+
+  .episode-details .episode-title {
+    font-size: .78rem;
+    gap: 10px;
+  }
+
+  .episode-summary {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  .episode-summary-image {
+    width: 100%;
+    max-width: 360px;
+    height: 170px;
+  }
+
+  .episode-summary p {
+    font-size: .76rem;
+    line-height: 1.65;
+  }
+}
+
 .season-pager {
   display: flex;
   align-items: center;
@@ -1532,6 +1547,56 @@ a {
 .season-nav.all:hover {
   border-color: var(--rust);
 }
+
+@media (max-width: 560px) {
+  .season-title-row {
+    align-items: flex-start;
+  }
+
+  .season-stamp {
+    min-width: 78px;
+    width: 78px;
+    height: 78px;
+  }
+
+  .season-stamp span {
+    font-size: 2rem;
+  }
+
+  .episodes-header {
+    padding: 0 14px;
+  }
+
+  .episodes-header span:first-child {
+    width: 48px;
+  }
+
+  .episode-item {
+    min-height: 58px;
+    padding: 8px 14px;
+    gap: 10px;
+  }
+
+  .episode-item:hover {
+    padding-left: 18px;
+  }
+
+  .episode-number {
+    flex-basis: 38px;
+    font-size: .85rem;
+  }
+
+  .episode-title {
+    font-size: .78rem;
+    line-height: 1.45;
+  }
+
+  .season-pager {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 
 /* Curiosidades */
 .curiosities-page {
@@ -1646,5 +1711,31 @@ a {
   .curiosity-card,
   .curiosity-card-featured {
     flex-basis: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .curiosities-page {
+    padding-bottom: 45px;
+  }
+
+  .curiosity-card {
+    min-width: 100%;
+    gap: 14px;
+    padding: 21px 18px 23px;
+  }
+
+  .curiosity-number {
+    flex-basis: 38px;
+    font-size: 1.55rem;
+  }
+
+  .curiosity-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .curiosity-content p:last-child {
+    font-size: .77rem;
+    line-height: 1.7;
   }
 }
