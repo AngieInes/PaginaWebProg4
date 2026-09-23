@@ -285,6 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const galleryItems = document.querySelectorAll(".gallery-item");
 
   let currentIndex = 0;
+  let lastFocusedItem = null;
 
   // Función para actualizar la imagen mostrada en el lightbox según su índice
   const updateLightboxContent = (index) => {
@@ -298,13 +299,27 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = index;
   };
 
+  // Abre el lightbox en el índice indicado y mueve el foco al botón de cerrar,
+  // guardando qué elemento lo abrió para poder devolver el foco al cerrarlo
+  const openLightbox = (index, triggerEl) => {
+    lastFocusedItem = triggerEl || document.activeElement;
+    updateLightboxContent(index);
+    lightbox.classList.add("active");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden"; // Evita el scroll de la página de fondo
+    closeBtn.focus();
+  };
+
   // Abrir lightbox al hacer clic en una tarjeta específica
   galleryItems.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      updateLightboxContent(index);
-      lightbox.classList.add("active");
-      lightbox.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden"; // Evita el scroll de la página de fondo
+    item.addEventListener("click", () => openLightbox(index, item));
+
+    // Soporte de teclado (Enter / Espacio) para quienes navegan sin mouse
+    item.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openLightbox(index, item);
+      }
     });
   });
 
@@ -337,6 +352,11 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       lightboxImg.src = "";
     }, 300);
+
+    // Devuelve el foco a la tarjeta que abrió el lightbox
+    if (lastFocusedItem) {
+      lastFocusedItem.focus();
+    }
   };
 
   closeBtn.addEventListener("click", closeLightbox);
