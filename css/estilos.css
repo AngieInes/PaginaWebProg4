@@ -982,6 +982,14 @@ a {
     flex-direction: column;
   }
 
+  /* Anula el transform de escritorio (translate -50%) que gana por especificidad
+     cuando el enlace queda en :focus-within al tocarlo en mobile, y que
+     empujaba el submenú fuera de la pantalla */
+  .nav-dropdown:hover .season-submenu,
+  .nav-dropdown:focus-within .season-submenu {
+    transform: none;
+  }
+
   .season-submenu a {
     display: block;
     padding: 12px 15px;
