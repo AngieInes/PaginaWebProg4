@@ -958,7 +958,7 @@ a {
     padding: 13px 4px;
   }
 
-  .season-submenu {
+ .season-submenu {
     position: static;
     display: none;
     opacity: 1;
@@ -967,19 +967,24 @@ a {
     transform: none;
     box-shadow: none;
     background: #383932;
-    padding-left: 15px;
+    padding: 10px 15px 10px 25px;
     border-top: none;
   }
 
-  /* Cuando el elemento contenedor tenga la clase .is-open, lo mostramos */
+  /* Se despliega en forma de lista vertical al hacer clic */
   .nav-dropdown.is-open .season-submenu {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
-
-  .season-submenu a {
-    padding: 10px 15px;
-    font-size: .8rem;
+ .season-submenu a {
+    display: block;
+    padding: 12px 15px;
+    color: #ffffff !important; /* Forzamos el color blanco visible */
+    font-size: .85rem;
+    white-space: normal;
+    border: none;
+    background: transparent;
   }
 
   .character-feature {
