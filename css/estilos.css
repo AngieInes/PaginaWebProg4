@@ -962,6 +962,24 @@ a {
     display: none;
   }
 
+  .main-nav.open .season-submenu {
+    position: static;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    box-shadow: none;
+    background: #383932; /* Un tono un poquito más claro para diferenciarlo */
+    padding-left: 15px;  /* Pequeña sangría para que parezca una sub-lista */
+    border-top: none;
+  }
+
+  .season-submenu a {
+    padding: 10px 15px;
+    font-size: .8rem;
+  }
+
   .character-feature {
     flex-direction: column;
     margin-bottom: 55px;
