@@ -247,7 +247,7 @@ function initCharacterSelector() {
 
       feature.classList.remove("is-switching");
 
-      if (moveToFeature && window.matchMedia("(max-width: 820px)").matches) {
+      if (moveToFeature) {
         feature.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }, 150);
