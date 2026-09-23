@@ -205,6 +205,17 @@ a {
   min-width: 0;
 }
 
+/* Antetítulos ("eyebrow"): la línea corta que va arriba de cada título principal */
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--rust);
+  font-family: "Cormorant Garamond", "Libre Baskerville", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  letter-spacing: .04em;
+}
+
 /* =========================================================
    Efecto de fotografías retro / "tiradas" en el Hero
    ========================================================= */
