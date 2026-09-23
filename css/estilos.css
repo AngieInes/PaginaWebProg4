@@ -959,7 +959,21 @@ a {
   }
 
   .season-submenu {
+    position: static;
     display: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    box-shadow: none;
+    background: #383932;
+    padding-left: 15px;
+    border-top: none;
+  }
+
+  /* Cuando el elemento contenedor tenga la clase .is-open, lo mostramos */
+  .nav-dropdown.is-open .season-submenu {
+    display: block;
   }
 
   .main-nav.open .season-submenu {
