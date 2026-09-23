@@ -17,8 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
         : '<i class="fa-solid fa-bars"></i>';
     });
 
+    // Modificamos esto para que NO cierre el menú si haces clic en el dropdown de temporadas
     nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
+      link.addEventListener("click", (e) => {
+        // Si el enlace pertenece al submenú de temporadas o es el botón principal del dropdown en mobile:
+        if (window.innerWidth <= 820 && link.closest(".nav-dropdown")) {
+          const dropdown = link.closest(".nav-dropdown");
+          
+          // Si hicieron clic en el botón principal ("Temporadas")
+          if (link.classList.contains("season-nav-link")) {
+            e.preventDefault(); // Evita que navegue o cierre el menú
+            dropdown.classList.toggle("is-open"); // Abre o cierra el acordeón
+            return;
+          }
+        }
+
+        // Para el resto de los enlaces normales, el menú se cierra con normalidad
         nav.classList.remove("open");
         toggle.setAttribute("aria-expanded", "false");
         toggle.setAttribute("aria-label", "Abrir menú");
