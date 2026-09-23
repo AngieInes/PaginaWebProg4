@@ -958,7 +958,7 @@ a {
     padding: 13px 4px;
   }
 
- .season-submenu {
+  .season-submenu {
     position: static;
     display: none;
     opacity: 1;
@@ -977,7 +977,7 @@ a {
     flex-direction: column;
   }
 
- .season-submenu a {
+  .season-submenu a {
     display: block;
     padding: 12px 15px;
     color: #ffffff !important; /* Forzamos el color blanco visible */
