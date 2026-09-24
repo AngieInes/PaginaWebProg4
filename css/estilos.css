@@ -1709,6 +1709,20 @@ a {
     height: auto;
     aspect-ratio: 16 / 9;
   }
+
+  /* El sello "N CAPÍTULOS" tiene ancho fijo (min-width: 105px) y comparte
+     fila con el título vía flex + space-between, sin wrap. En pantallas
+     angostas el título ya ocupa casi todo el ancho y el sello queda
+     empujado fuera del viewport (de ahí el scroll horizontal). Los apilamos. */
+  .season-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .season-stamp {
+    align-self: flex-start;
+  }
 }
 
 /* =========================================================
